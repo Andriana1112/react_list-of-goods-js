@@ -30,7 +30,7 @@ export const App = () => {
   });
 
   // Перевірка, чи товари в оригінальному порядку
-  const checkIfOriginalOrder = () => {
+  const determineOriginalOrder = () => {
     return goods.every((good, index) => good === originalGoods[index]);
   };
 
@@ -129,7 +129,7 @@ export const App = () => {
           Reverse
         </button>
 
-        {!checkIfOriginalOrder() && (
+        {!determineOriginalOrder() && (
           <button
             type="button"
             className="button is-danger is-light"
